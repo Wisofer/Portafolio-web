@@ -20,7 +20,7 @@ const Navbar = () => {
       } else {
         navigate("/");
       }
-      console.log(auth)
+      
     });
   }, [navigate]);
   return (
