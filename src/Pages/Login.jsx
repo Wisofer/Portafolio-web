@@ -29,7 +29,7 @@ const Login = () => {
       <div className="max-w-md w-full mx-auto">
         <div className="bg-white p-8 shadow-md">
           <h2 className="text-2xl font-bold text-center mb-6">
-            Iniciar sesión
+            ¡Iniciar sesión amigo!
           </h2>
           <form onSubmit={handleSubmit}>
             <div className="mb-4">
