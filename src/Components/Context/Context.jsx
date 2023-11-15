@@ -6,7 +6,6 @@ export const TheContext = createContext();
 export const ContextProvider = (props) => {
   async function signOut() {
     const result = await supabase.auth.signOut();
-    console.log(result);
   }
 
   const InsertarDatos = async (nombre, apellido, telefono, comentario ) => {
@@ -18,6 +17,7 @@ export const ContextProvider = (props) => {
         telefono,
         comentario
        });
+       
   };
 
   return (
