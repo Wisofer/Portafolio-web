@@ -18,7 +18,7 @@ const DatosFormulario = () => {
   }, []);
 
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto mb-4">
       <div className="overflow-x-auto">
         <table className="min-w-full bg-white border border-gray-300">
           <thead>
