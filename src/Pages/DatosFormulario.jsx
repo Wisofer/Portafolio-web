@@ -19,40 +19,22 @@ const DatosFormulario = () => {
 
   return (
     <div className="container mx-auto mb-4">
-      <div className="overflow-x-auto">
-        <table className="min-w-full bg-white border border-gray-300">
-          <thead>
-            <tr>
-              <th className="py-2 px-4 border-b">ID</th>
-              <th className="py-2 px-4 border-b">Nombre</th>
-              <th className="py-2 px-4 border-b">Apellido</th>
-              <th className="py-2 px-4 border-b">Teléfono</th>
-              <th className="py-2 px-4 border-b">Descripción</th>
-              <th className="py-2 px-4 border-b">Operaciones</th>
-            </tr>
-          </thead>
-          <tbody>
-            {datos.map((item, index) => (
-              <tr key={index}>
-                <td className="py-2 px-4 border-b">{index + 1}</td>
-                <td className="py-2 px-4 border-b">{item.nombre}</td>
-                <td className="py-2 px-4 border-b">{item.apellido}</td>
-                <td className="py-2 px-4 border-b">{item.telefono}</td>
-                <td className="py-2 px-4 border-b">{item.comentario}</td>
-                <td>
-                  <div className="flex justify-center">
-                    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full mr-4">
-                      Editar
-                    </button>
-                    <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full">
-                      Eliminar
-                    </button>
-                  </div>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        {datos.map((item, index) => (
+          <div key={index} className="bg-white rounded-lg shadow-md p-4">
+            <h2 className="text-xl font-semibold mb-2">{item.nombre} {item.apellido}</h2>
+            <p className="text-gray-600 mb-4">Teléfono: {item.telefono}</p>
+            <p className="text-gray-600 mb-4">Descripción: {item.comentario}</p>
+            <div className="flex justify-center">
+              <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full mr-4">
+                Editar
+              </button>
+              <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full">
+                Eliminar
+              </button>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );

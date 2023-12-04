@@ -9,7 +9,7 @@ export const ContextProvider = (props) => {
   }
 
   const InsertarDatos = async (nombre, apellido, telefono, comentario ) => {
-    const { error } = await supabase
+    const { error, data } = await supabase
       .from("formulario")
       .insert({ 
         nombre,
@@ -17,6 +17,8 @@ export const ContextProvider = (props) => {
         telefono,
         comentario
        });
+
+       
        
   };
 
