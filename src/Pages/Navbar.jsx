@@ -14,14 +14,14 @@ const Navbar = () => {
   const { signOut } = useContext(TheContext);
 
   useEffect(() => {
-    const auth = supabase.auth.onAuthStateChange((event, seccion) => {
-      if (!seccion) {
-        navigate("/login");
-      } else {
-        navigate("/");
-      }
+    // const auth = supabase.auth.onAuthStateChange((event, seccion) => {
+    //   if (!seccion) {
+    //     navigate("/login");
+    //   } else {
+    //     navigate("/");
+    //   }
       
-    });
+    // });
   }, [navigate]);
   return (
     <div>
@@ -78,12 +78,12 @@ const Navbar = () => {
                   >
                     Contacto
                   </Link>
-                  <button
+                  <div
                     onClick={signOut}
-                    className="bg-blue-700 text-white hover:bg-red-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                    className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium flex"
                   >
                     Desconectar
-                  </button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -93,11 +93,11 @@ const Navbar = () => {
         {/* Menú desplegable en dispositivos móviles */}
         <MenuMovile />
       </nav>
-      <div className="mt-5">
+      <div className="">
         <Outlet />
       </div>
 
-      <div>
+      <div className="mt-20">
         <Footer/>
       </div>
     </div>

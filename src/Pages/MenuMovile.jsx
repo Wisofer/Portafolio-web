@@ -79,14 +79,15 @@ const MenuMovile = () => {
               </Link>
             </li>
             <li>
-              <button
+              <div
                 onClick={signOut}
-                className="bg-blue-700 text-white hover:bg-red-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium flex"
               >
                 Desconectar
-              </button>
+              </div>
             </li>
           </ul>
+          
         </div>
       </nav>
     </div>

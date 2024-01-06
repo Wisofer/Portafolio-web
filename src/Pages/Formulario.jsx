@@ -49,7 +49,7 @@ const Formulario = () => {
           <div className="mb-4">
             <label
               htmlFor="name"
-              className="block mb-2 font-medium text-gray-700"
+              className="block mb-2 font-medium text-gray-700 text-white"
             >
               Nombres completo
             </label>
@@ -66,7 +66,7 @@ const Formulario = () => {
           <div className="mb-4">
             <label
               htmlFor="email"
-              className="block mb-2 font-medium text-gray-700"
+              className="block mb-2 font-medium text-gray-700 text-white"
             >
               Apellidos Completo
             </label>
@@ -83,7 +83,7 @@ const Formulario = () => {
           <div className="mb-4">
             <label
               htmlFor="phone"
-              className="block mb-2 font-medium text-gray-700"
+              className="block mb-2 font-medium text-gray-700 text-white"
             >
               Teléfono
             </label>
@@ -100,7 +100,7 @@ const Formulario = () => {
           <div className="mb-4">
             <label
               htmlFor="address"
-              className="block mb-2 font-medium text-gray-700"
+              className="block mb-2 font-medium text-gray-700 text-white"
             >
               Comentario
             </label>

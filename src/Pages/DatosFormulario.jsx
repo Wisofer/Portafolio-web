@@ -18,8 +18,9 @@ const DatosFormulario = () => {
   }, []);
 
   return (
-    <div className="container mx-auto mb-4">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+    <div className="container mx-auto my-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
+        {datos === length } 
         {datos.map((item, index) => (
           <div key={index} className="bg-white rounded-lg shadow-md p-4">
             <h2 className="text-xl font-semibold mb-2">{item.nombre} {item.apellido}</h2>

@@ -35,15 +35,15 @@ const Login = () => {
   return (
     <div className="flex items-center justify-center h-screen">
       <div className="max-w-md w-full mx-auto">
-        <div className="bg-white p-8 shadow-md">
-          <h2 className="text-2xl font-bold text-center mb-6">
-            ¡Iniciar sesión amigo!
+        <div className="bg-gray-500 p-8 shadow-md">
+          <h2 className="text-2xl text-white font-bold text-center mb-6">
+            ¡Iniciar sesión!
           </h2>
           <form onSubmit={handleSubmit}>
             <div className="mb-4">
               <label
                 htmlFor="email"
-                className="block text-gray-700 font-bold mb-2"
+                className="block text-gray-700 font-bold mb-2 text-white"
               >
                 Correo electrónico
               </label>
@@ -58,7 +58,7 @@ const Login = () => {
             <div className="mb-4">
               <label
                 htmlFor="password"
-                className="block text-gray-700 font-bold mb-2"
+                className="block text-gray-700 font-bold mb-2 text-white"
               >
                 Contraseña
               </label>
@@ -74,20 +74,16 @@ const Login = () => {
               )}
             </div>
             <div className="flex items-center justify-between mb-4">
-              <label htmlFor="remember" className="flex items-center">
-                <input type="checkbox" id="remember" className="mr-2" />
-                <span className="text-gray-700">Recuérdame</span>
-              </label>
               <Link
                 to={"/crearcuenta"}
-                className="text-blue-500 hover:underline"
+                className="text-blue-500 hover:underline text-white"
               >
                 Crear una cuenta
               </Link>
             </div>
             <button
               type="submit"
-              className="bg-blue-500 text-white rounded-md px-4 py-2 w-full font-bold hover:bg-blue-600"
+              className="bg-blue-500 text-white rounded-md px-4 py-2 w-full font-bold hover:bg-blue-600 text-white"
               disabled={isLoading}
             >
               {isLoading ? "Cargando..." : "Iniciar sesión"}

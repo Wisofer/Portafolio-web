@@ -2,10 +2,10 @@ import React, { useState } from "react";
 
 const Contacto = () => {
   return (
-    <div class="min-h-screen p-6 bg-gray-100 flex items-center justify-center">
+    <div class="min-h-screen p-6 bg-zinc-00 flex items-center justify-center">
       <div class="container max-w-screen-lg mx-auto">
         <div>
-          <h2 class="text-3xl font-semibold text-center mb-6 text-gray-700">
+          <h2 class="text-3xl font-semibold text-center mb-6 text-gray-700 text-white">
             Mis redes sociales
           </h2>
 
