@@ -1,52 +1,35 @@
-import React, { useEffect } from "react";
+import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App.jsx";
 import "./index.css";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-//import "bootstrap/dist/css/bootstrap.min.css";
-import Home from "./Pages/Home.jsx";
-import Formulario from "./Pages/Formulario.jsx";
-import DatosFormulario from "./Pages/DatosFormulario.jsx";
-import Error404 from "./Pages/Error404.jsx";
-import Contacto from "./Pages/Contacto.jsx";
-import Acerca from "./Pages/Acerca.jsx";
-import Login from "./Pages/Login.jsx";
-import { supabase } from "./Components/Client.jsx";
-import { useNavigate } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ContextProvider } from "./Components/Context/Context.jsx";
-import CrearCuenta from "./Pages/CrearCuenta.jsx";
-import Navbar from "./Pages/Navbar.jsx";
-
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Navbar />,
-    children: [
-      { path: "", element: <Home /> },
-      { path: "formulario", element: <Formulario /> },
-      { path: "datos", element: <DatosFormulario /> },
-      { path: "acerca", element: <Acerca /> },
-      { path: "contacto", element: <Contacto /> },
-      { path: "*", element: <Error404 /> },
-    ],
-  },
-
-  {
-    path: "/login",
-    element: <Login />
-  },
-  {
-    path: "/crearcuenta",
-    element: <CrearCuenta />,
-  },
-  { path: "*", element: <Error404 /> }
-]);
+import App from "./App.jsx";
+import Formulario from "./Pages/Formulario";
+import DatosFormulario from "./Pages/DatosFormulario";
+import Acerca from "./Pages/Acerca";
+import Contacto from "./Pages/Contacto";
+import Login from "./Pages/Login";
+import CrearCuenta from "./Pages/CrearCuenta";
+import Error404 from "./Pages/Error404";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <ContextProvider>
-      <RouterProvider router={router} />
+      <Router>
+        <Routes>
+          <Route path="/" element={<App />}>
+            <Route path="formulario" element={<Formulario />} />
+            <Route path="datos" element={<DatosFormulario />} />
+            <Route path="acerca" element={<Acerca />} />
+            <Route path="contacto" element={<Contacto />} />
+            <Route path="login" element={<Login />} />
+            <Route path="*" element={<Error404 />} />
+          </Route>
+          <Route path="/login" element={<Login />} />
+          <Route path="/crearcuenta" element={<CrearCuenta />} />
+          <Route path="*" element={<Error404 />} />
+        </Routes>
+      </Router>
     </ContextProvider>
   </React.StrictMode>
 );
