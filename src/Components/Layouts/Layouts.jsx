@@ -13,6 +13,14 @@ export default function Layouts() {
     document.body.removeChild(link);
   };
 
+  const handleMenuClick = (item) => {
+    if (item === 'Inicio') {
+      window.location.href = '/'; // Redirect to the home page
+    } else {
+      window.location.href = `#${item.toLowerCase()}`; // Redirect to the respective section
+    }
+  };
+
   const menuItems = ['Inicio', 'Proyectos', 'Habilidades', 'Experiencia', 'Testimonios', 'Blog', 'Contacto'];
 
   return (
@@ -31,8 +39,8 @@ export default function Layouts() {
               {menuItems.map((item) => (
                 <a
                   key={item}
-                  href={`#${item.toLowerCase()}`}
-                  className="text-gray-300 hover:text-blue-400 transition-colors px-3 py-2 text-sm font-medium"
+                  onClick={() => handleMenuClick(item)}
+                  className="text-gray-300 hover:text-blue-400 transition-colors px-3 py-2 text-sm font-medium cursor-pointer"
                 >
                   {item}
                 </a>
@@ -74,9 +82,11 @@ export default function Layouts() {
               {menuItems.map((item) => (
                 <a
                   key={item}
-                  href={`#${item.toLowerCase()}`}
-                  className="text-gray-300 hover:text-blue-400 block px-3 py-2 text-base font-medium"
-                  onClick={() => setIsMenuOpen(false)}
+                  onClick={() => {
+                    handleMenuClick(item);
+                    setIsMenuOpen(false);
+                  }}
+                  className="text-gray-300 hover:text-blue-400 block px-3 py-2 text-base font-medium cursor-pointer"
                 >
                   {item}
                 </a>

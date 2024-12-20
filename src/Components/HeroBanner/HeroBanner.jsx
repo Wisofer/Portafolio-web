@@ -60,17 +60,17 @@ export default function HeroBanner() {
   };
 
   return (
-    <div className="min-h-screen w-full bg-gradient-to-b from-[#020420] to-[#03072b] px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen w-full bg-gradient-to-b from-[#020420] to-[#03072b] px-4 sm:px-6 lg:px-8 mt-16"> {/* Added margin-top here */}
       <div className="container mx-auto pt-16 sm:pt-20 lg:pt-24">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-12"> {/* Adjusted gap here */}
           {/* Profile Image */}
-          <div className="relative w-60 h-60 sm:w-72 sm:h-72 lg:w-96 lg:h-96 mx-auto lg:mx-0">
-            <div className="absolute inset-0 rounded-full bg-blue-500 blur-3xl opacity-20 animate-pulse"></div>
+          <div className="relative w-60 h-60 sm:w-72 sm:h-72 lg:w-96 lg:h-96 mx-auto lg:mx-0 lg:ml-60"> {/* Moved image further to the right */}
+            <div className="absolute inset-0 rounded-full bg-blue-500 blur-3xl opacity-30 animate-pulse"></div> {/* Increased opacity for more illumination */}
             <div className="relative w-full h-full rounded-full border-2 border-blue-400 overflow-hidden">
               <img
                 src={img1}
                 alt="Profile"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover brightness-125" // Added brightness class for more illumination
                 loading="eager"
               />
             </div>
