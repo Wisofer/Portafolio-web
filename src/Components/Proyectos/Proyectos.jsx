@@ -63,7 +63,7 @@ function Proyectos() {
                   {project.title}
                 </h4>
               </div>
-              <p className="text-sm sm:text-base text-gray-300 mb-4 sm:mb-6 leading-relaxed">{project.description}</p>
+              <p className="text-sm sm:text-base text-gray-300 mb-4 sm:mb-1 leading-relaxed">{project.description}</p>
               <div className="flex flex-wrap gap-2 sm:gap-3">
                 {project.technologies.map((tech) => (
                   <span 
