@@ -11,7 +11,7 @@ import WorkExperiencia from './Components/WorkExperiencia/WorkExperiencia'
 import Certificaciones from './Components/Certificaciones/Certificaciones'
 import Blog from './Components/Blog/Blog'
 import Contacto from './Components/Contacto/Contacto'
-
+import HeroBanner from './Components/HeroBanner/HeroBanner'
 
 function Bienvenida() {
   const [expandedProject, setExpandedProject] = useState(null)
@@ -20,32 +20,9 @@ function Bienvenida() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-blue-700 text-white font-montserrat">
       <Layouts />
-      <main className="container mx-auto px-4 pt-24 pb-12">
-        <section id="inicio" className="min-h-screen flex flex-col justify-center items-center text-center">
-          <motion.h2
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-5xl md:text-7xl font-bold mb-6"
-          >
-            Desarrollador Full Stack
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-xl md:text-2xl mb-8 max-w-2xl"
-          >
-            Creando experiencias digitales innovadoras y soluciones tecnológicas de vanguardia.
-          </motion.p>
-          <motion.a
-            href="#proyectos"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full text-lg transition-colors"
-          >
-            Ver Proyectos
-          </motion.a>
+      <main className="w-full">
+        <section id="inicio" className="w-full">
+          <HeroBanner />
         </section>
 
         <Proyectos />
@@ -58,35 +35,35 @@ function Bienvenida() {
         <Contacto />
       </main>
 
-      <footer className="bg-black bg-opacity-30 backdrop-blur-md py-8">
+      <footer className="bg-black bg-opacity-30 backdrop-blur-md py-4 sm:py-6 md:py-8 w-full">
         <div className="container mx-auto px-4 text-center">
-          <p className="text-lg mb-4">&copy; 2024 Mi Portafolio Pro. Todos los derechos reservados.</p>
-          <div className="flex justify-center space-x-6">
+          <p className="text-base sm:text-lg mb-2 sm:mb-4">&copy; 2024 Mi Portafolio Pro. Todos los derechos reservados.</p>
+          <div className="flex justify-center space-x-4 sm:space-x-6">
             <motion.a
               href="#"
               whileHover={{ scale: 1.2 }}
               whileTap={{ scale: 0.9 }}
-              className="text-white hover:text-blue-400 transition-colors"
+              className="text-white hover:text-blue-400 transition-colors p-2"
             >
-              <Code className="w-6 h-6" />
+              <Code className="w-5 h-5 sm:w-6 sm:h-6" />
               <span className="sr-only">GitHub</span>
             </motion.a>
             <motion.a
               href="#"
               whileHover={{ scale: 1.2 }}
               whileTap={{ scale: 0.9 }}
-              className="text-white hover:text-blue-400 transition-colors"
+              className="text-white hover:text-blue-400 transition-colors p-2"
             >
-              <Star className="w-6 h-6" />
+              <Star className="w-5 h-5 sm:w-6 sm:h-6" />
               <span className="sr-only">LinkedIn</span>
             </motion.a>
             <motion.a
               href="#"
               whileHover={{ scale: 1.2 }}
               whileTap={{ scale: 0.9 }}
-              className="text-white hover:text-blue-400 transition-colors"
+              className="text-white hover:text-blue-400 transition-colors p-2"
             >
-              <Mail className="w-6 h-6" />
+              <Mail className="w-5 h-5 sm:w-6 sm:h-6" />
               <span className="sr-only">Email</span>
             </motion.a>
           </div>
