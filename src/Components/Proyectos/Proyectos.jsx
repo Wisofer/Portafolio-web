@@ -52,8 +52,8 @@ function Proyectos() {
             onClick={() => setExpandedProject(expandedProject === project.id ? null : project.id)}
             className="backdrop-blur-lg bg-white/5 rounded-xl sm:rounded-2xl overflow-hidden cursor-pointer border border-white/10 shadow-2xl hover:border-blue-500/50 transition-all duration-300"
             style={{
-              height: expandedProject === project.id ? 'auto' : '300px',
-              minHeight: '280px'
+              height: expandedProject === project.id ? 'auto' : '350px', // Increased height
+              minHeight: '320px' // Increased minHeight
             }}
           >
             <div className="p-4 sm:p-6 lg:p-8">
