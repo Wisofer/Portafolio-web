@@ -7,6 +7,7 @@ const experienceData = [
   { year: 2022, projects: 15 },
   { year: 2023, projects: 15 },
   { year: 2024, projects: 20 },
+  { year: 2025, projects: 22 },
 ]
 
 const techStackData = [
