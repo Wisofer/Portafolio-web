@@ -1,4 +1,4 @@
-import { Facebook, Twitter, Instagram, Linkedin } from 'lucide-react'
+import { Facebook, Instagram, Linkedin } from 'lucide-react'
 import { useState, useEffect } from 'react'
 import img1 from "../../../public/img/img2.jpeg"
 
@@ -88,15 +88,19 @@ export default function HeroBanner() {
               And I'm a <span className="text-blue-400">{displayText}{showCursor ? '|' : ''}</span>
             </p>
             <p className="text-sm sm:text-base text-gray-400 mb-6 sm:mb-8 max-w-2xl mx-auto lg:mx-0">
-              Desarrollador Full Stack con experiencia en tecnologías como React, Laravel y PHP. Experto en crear soluciones digitales innovadoras y efectivas, combinando sólidas habilidades técnicas con un enfoque creativo en la experiencia del usuario.
+              Desarrollador Full Stack con mas de 6 años de experiencia, especializado en backend con .NET, frontend con tecnologias web modernas y desarrollo de aplicaciones moviles con Flutter. Diseño e implemento soluciones digitales eficientes, escalables y orientadas a negocio, ayudando a empresas a optimizar procesos, mejorar la experiencia de sus usuarios y acelerar su crecimiento.
             </p>
 
             {/* Social Icons */}
             <div className="flex flex-wrap gap-4 justify-center lg:justify-start mb-6 sm:mb-8">
-              {[Facebook, Twitter, Instagram, Linkedin].map((Icon, index) => (
+              {[
+                { Icon: Linkedin, href: 'https://www.linkedin.com/in/william-borge-450798201/' },
+                { Icon: Instagram, href: 'https://www.instagram.com/wisofer17/' },
+                { Icon: Facebook, href: 'https://www.facebook.com/jack.stan.neko/' }
+              ].map(({ Icon, href }, index) => (
                 <a
                   key={index}
-                  href="#"
+                  href={href}
                   className="p-2 text-gray-400 hover:text-blue-400 transition-colors"
                   target="_blank"
                   rel="noopener noreferrer"

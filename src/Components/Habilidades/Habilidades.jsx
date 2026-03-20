@@ -1,21 +1,43 @@
 import { motion } from 'framer-motion'
 import { Code, Server, Smartphone, Palette, Terminal, Cloud } from 'lucide-react'
 
-const skills = [
-  { name: 'Desarrollo Frontend', level: 90, icon: Code },
-  { name: 'Desarrollo Backend', level: 85, icon: Server },
-  { name: 'Desarrollo Móvil', level: 80, icon: Smartphone },
-  { name: 'Diseño UI/UX', level: 85, icon: Palette },
-  { name: 'Angular', level: 85, icon: Code },
-  { name: 'Laravel', level: 80, icon: Server },
-  { name: 'React.js', level: 90, icon: Code },
-  { name: 'PHP', level: 80, icon: Server },
-  { name: 'Tailwind CSS', level: 75, icon: Palette },
-  { name: 'Bootstrap', level: 95, icon: Palette },
-  { name: 'Control de Versiones con Git', level: 85, icon: Code },
-  { name: 'Administración de Servidores con Linux', level: 85, icon: Terminal },
-  { name: 'Administración de Sistemas', level: 75, icon: Server },
-  { name: 'SaaS', level: 80, icon: Cloud },
+const skillGroups = [
+  {
+    title: 'Frontend',
+    icon: Code,
+    level: 95,
+    summary: 'React, JavaScript, TypeScript, Redux, Tailwind, Vite'
+  },
+  {
+    title: 'Backend',
+    icon: Server,
+    level: 92,
+    summary: '.NET, C#, Node.js, Laravel, PHP, JWT, GraphQL, Microservices'
+  },
+  {
+    title: 'Mobile',
+    icon: Smartphone,
+    level: 90,
+    summary: 'Flutter, React Native, Firebase, Firebase Messaging, WebSockets'
+  },
+  {
+    title: 'Bases de Datos',
+    icon: Terminal,
+    level: 90,
+    summary: 'PostgreSQL, SQL Server, MongoDB, MySQL, SQLite, Redis, Supabase'
+  },
+  {
+    title: 'Cloud, DevOps y Deploy',
+    icon: Cloud,
+    level: 86,
+    summary: 'Azure, AWS, GCP, Docker, Kubernetes, Jenkins, Terraform, Dokploy'
+  },
+  {
+    title: 'Testing y Flujo',
+    icon: Palette,
+    level: 88,
+    summary: 'XUnit, Unit Testing, Jest, Cypress, Selenium, Git, GitHub, Jira'
+  }
 ]
 
 function Habilidades() {
@@ -30,9 +52,9 @@ function Habilidades() {
         Mis Habilidades
       </motion.h3>
       <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
-        {skills.map((skill, index) => (
+        {skillGroups.map((group, index) => (
           <motion.div
-            key={skill.name}
+            key={group.title}
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -40,23 +62,26 @@ function Habilidades() {
           >
             <div className="flex items-center mb-4 sm:mb-6">
               <div className="p-2 sm:p-3 rounded-lg sm:rounded-xl bg-blue-500/20 mr-3 sm:mr-4">
-                <skill.icon className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-blue-400" />
+                <group.icon className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-blue-400" />
               </div>
-              <h4 className="text-base sm:text-lg md:text-xl font-semibold text-white">{skill.name}</h4>
+              <h4 className="text-base sm:text-lg md:text-xl font-semibold text-white">{group.title}</h4>
             </div>
+            <p className="text-xs sm:text-sm text-gray-300 mb-4 sm:mb-5 leading-relaxed">
+              {group.summary}
+            </p>
             <div className="relative w-full h-3 sm:h-4 bg-black/30 rounded-full overflow-hidden backdrop-blur-sm">
               <motion.div
                 className="absolute top-0 left-0 h-full rounded-full bg-gradient-to-r from-blue-500 to-cyan-400"
                 initial={{ width: 0 }}
-                whileInView={{ width: `${skill.level}%` }}
-                transition={{ duration: 1.5, delay: 0.2 }}
+                whileInView={{ width: `${group.level}%` }}
+                transition={{ duration: 1.2, delay: 0.2 }}
               >
                 <div className="absolute top-0 right-0 h-full w-full bg-[rgba(255,255,255,0.2)] animate-pulse"></div>
               </motion.div>
             </div>
             <div className="flex justify-between items-center mt-2 sm:mt-3">
               <span className="text-xs sm:text-sm text-gray-400">Dominio</span>
-              <span className="text-base sm:text-lg font-semibold text-blue-400">{skill.level}%</span>
+              <span className="text-base sm:text-lg font-semibold text-blue-400">{group.level}%</span>
             </div>
           </motion.div>
         ))}

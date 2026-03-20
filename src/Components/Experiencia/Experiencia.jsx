@@ -8,17 +8,20 @@ const experienceData = [
   { year: 2023, projects: 15 },
   { year: 2024, projects: 20 },
   { year: 2025, projects: 22 },
+  { year: 2026, projects: 24 },
 ]
 
 const techStackData = [
-  { name: 'React', value: 25 },
-  { name: 'Laravel', value: 20 },
-  { name: 'JavaScript', value: 30 },
-  { name: 'PHP', value: 25 },
-  { name: 'Tailwind CSS', value: 10 },
-  { name: 'GitHub', value: 10 },
-  { name: 'Lucide React', value: 5 },
-  { name: 'Font Awesome', value: 5 },
+  { name: '.NET', value: 28 },
+  { name: 'Flutter', value: 24 },
+  { name: 'React', value: 26 },
+  { name: 'JavaScript', value: 22 },
+  { name: 'Laravel', value: 18 },
+  { name: 'Tailwind CSS', value: 16 },
+  { name: 'JWT', value: 14 },
+  { name: 'Firebase Messaging', value: 14 },
+  { name: 'Dokploy', value: 12 },
+  { name: 'GitHub', value: 12 },
 ]
 
 const COLORS = ['#00f2fe', '#4facfe', '#0ea5e9', '#38bdf8', '#7dd3fc']
