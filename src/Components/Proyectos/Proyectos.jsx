@@ -10,8 +10,7 @@ const projects = [
       'Sistema web para bares y restaurantes que centraliza mesas, pedidos, ventas e inventario en un solo panel.',
     result:
       'Menos errores en operación diaria y mayor rentabilidad del negocio.',
-    image:
-      '/img/Gemini_Generated_Image_ssy9rzssy9rzssy9.png',
+    image: '/img/barrespos.png',
     platform: 'web',
     status: 'live',
     icon: Briefcase,
